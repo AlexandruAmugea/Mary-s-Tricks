@@ -1,4 +1,4 @@
-body {
+ body {
     font-family: $Miller-Display;
 }
 
@@ -12,3 +12,12 @@ h2 em {
     font-family: $Miller-DisplayItalic;
     text-decoration: underline;
 }
+
+a {
+    color: $black;
+}
+
+a:hover {
+    color: $orange;
+}
+
