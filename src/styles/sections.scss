@@ -44,9 +44,8 @@
 }
 
 .instagram-wrapper {
-    background: url(/images/instagram_img.jpg);
+    background: url(~/images/instagram-bg.jpg) no-repeat left top;
     background-size: cover;
-    background-position: center center;
     padding: 28px 0;
 }
 
