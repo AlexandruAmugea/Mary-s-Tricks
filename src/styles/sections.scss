@@ -17,16 +17,11 @@
 .carousel-indicators li {
     border-color: $black;
     background: $black;
-    width: 8px;
-    height: 8px;
-    border-radius: 4px;
 }
 
 .carousel-indicators li.active {
     border-color: $orange;
-    width: 9px;
-    height: 9px;
-    border-radius: 4px;
+    background: $orange;
 }
 
 /* START INSTAGRAM SECTION */
