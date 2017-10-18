@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="buroka">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Mary's Tricks</title>
@@ -10,8 +10,8 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800,900" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-  <header>
+<body ng-app="MaryTricks">
+  <header ng-controller="MainCtrl">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -101,6 +101,7 @@
       <div class="row">
           <div class="col-xs-12 text-center">
             <div class="instagram-wrapper">
+              <slider-insta-feed></slider-insta-feed>
               <div class="instagram-box">
                 <div class="instagram-cta">
                   <span class="instagram-title">Mary's Instagram</span><br/>

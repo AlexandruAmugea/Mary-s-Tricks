@@ -39,15 +39,16 @@
 }
 
 .instagram-wrapper {
-    background: url(~/images/instagram-bg.jpg) no-repeat left top;
-    background-size: cover;
-    padding: 28px 0;
+    position: relative;
 }
 
 .instagram-box {
     background: $white;
     padding: 9px 10px;
     display: inline-block;
+    position: absolute;
+    left: calc(50% - 155px);
+    top: calc(50% - 57.5px);
 }
 
 .instagram-cta {
@@ -208,3 +209,19 @@
     }
 }
 /* MOBILE */
+
+.slide-insta-feed {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.slide-insta-feed li {
+    display: inline-block;
+    width: 12.5%;
+}
+
+.slide-insta-feed li img {
+    width: 100%;
+    height: auto;
+}
