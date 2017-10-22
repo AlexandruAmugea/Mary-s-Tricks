@@ -14,8 +14,8 @@ export default function mainCtrl($scope, instagramService) {
         function removeClasses(elements) {
             elements.forEach(function(elem) {
                 elem.classList.remove('active');
-            })
-        }
+            });
+        };
         
         if(path === '/') {
             removeClasses(menuItems);

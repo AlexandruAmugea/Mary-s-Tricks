@@ -1,14 +1,14 @@
 {
-  "name": "baroka",
+  "name": "marystricks",
   "version": "1.0.0",
-  "description": "BUROKA MAKES IT SAFE & EASY TO BUY AND SELL BITCOIN IN NIGERIA",
+  "description": "Mary's Tricks",
   "scripts": {
     "build": "webpack --config webpack-prod.config.js --colors",
     "dev": "webpack-dev-server --open --config webpack-dev.config.js --watch --colors"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wbkd/yet-another-webpack-es6-starterkit.git"
+    "url": "https://github.com/AlexandruAmugea/Mary-s-Tricks"
   },
   "keywords": [
     "Bitcoin",
@@ -18,7 +18,7 @@
   "author": "Alexandru Amugea",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AlexandruAmugea/baroka-lp/issues"
+    "url": "https://github.com/AlexandruAmugea/Mary-s-Tricks/issues"
   },
   "eslintConfig": {
     "env": {
@@ -54,9 +54,8 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
-    "angular": "^1.4.0",
-    "angular-route": "^1.4.0",
-    "angular-ui-router": "^0.4.3",
+    "angular": "1.4.0",
+    "angular-route": "1.4.0",
     "babel-polyfill": "^6.9.0"
   }
 }

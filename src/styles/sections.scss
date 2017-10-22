@@ -62,7 +62,7 @@
     font-family: "Miller-Display";
 }
 
-.instagram-address {
+.instagram-address a{
     color: $orange;
 }
 /* END INSTAGRAM SECTION */
@@ -276,4 +276,24 @@ body.contact {
 
 .contact ul.contact-list li:first-child {
     padding: 0;
+}
+
+.social-icons-fixed {
+    position: fixed;
+    right: 15px;
+    top: calc(50% - 75px);
+    z-index: 10000;
+}
+
+.social-icons-fixed ul {
+    list-style: none;
+}
+
+.social-icons-fixed ul li {
+    margin-bottom: 10px;
+}
+
+.social-icons-fixed ul li img {
+    width: 32px;
+    height: 32px;
 }
