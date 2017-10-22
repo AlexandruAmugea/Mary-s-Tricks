@@ -19,7 +19,6 @@
     border: none;
     color: $black;
     background: transparent;
-    transition: .25s all ease;
     font-size: 26px;
     border-radius: 0px;
     padding: 0px;
@@ -68,5 +67,10 @@
     &.disabled:hover {
         cursor: not-allowed;
     }
+}
+
+.btn-gallery.ng-hide {
+    visibility: hidden;
+    display: block !important;
 }
 

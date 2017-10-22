@@ -19,11 +19,11 @@ export default function galleryCtrl(instagramService, $scope) {
         access_token: KEYS.instagramToken,
     }).then(function(_data){
         $scope.picturesArray = [];
-        for(var i = 0; i < 5; i++) {
+        for(var i = 0; i < 100; i++) {
             _data.data.data.forEach(function(elem){
                 $scope.picturesArray.push(elem);
             });
-        }
+        };
         console.log(_data);
         createDataForPages($scope.picturesArray);
     });
