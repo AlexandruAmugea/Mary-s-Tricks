@@ -1,12 +1,12 @@
 import KEYS from '../const/const';
+var viewSliderInstaFeed = require('raw-loader!../views/sliderInstaFeed.html');
 
 sliderInstaFeed.$inject = ['instagramService'];
 export default function sliderInstaFeed(instagramService) {
     return {
         scope: {},
         restrict: "AE",
-        template: '<ul class="slide-insta-feed"><li ng-repeat="pic in pictures track by $index">'
-                    + '<img ng-src="{{pic.images.thumbnail.url}}" /></li></ul>',
+        template: viewSliderInstaFeed,
         controller: function($scope){
 
             instagramService.getMediaFromUserById({
