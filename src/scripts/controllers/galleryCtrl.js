@@ -1,9 +1,8 @@
 import KEYS from '../const/const';
-var viewSliderInstaFeed = require('raw-loader!../views/sliderInstaFeed.html');
+const viewSliderInstaFeed = require('raw-loader!../views/sliderInstaFeed.html');
 
 galleryCtrl.$inject = ['instagramService', '$scope'];
-
-export default function galleryCtrl(instagramService, $scope) {
+function galleryCtrl(instagramService, $scope) {
 
     $scope.options = {
         pages: null,
@@ -54,3 +53,5 @@ export default function galleryCtrl(instagramService, $scope) {
     };
         
 }
+
+export default galleryCtrl;

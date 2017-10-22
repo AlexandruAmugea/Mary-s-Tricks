@@ -297,3 +297,12 @@ body.contact {
     width: 32px;
     height: 32px;
 }
+
+.social-icons-fixed ul li a:hover img{
+    transition: .25s all ease;
+    transform: rotate(360deg);
+}
+
+.desktop-nav .logo {
+    display: none;
+}

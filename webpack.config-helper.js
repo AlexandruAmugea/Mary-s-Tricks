@@ -44,10 +44,6 @@ module.exports = (options) => {
             presets: ['es2015']
           }
         }
-      }, 
-      {
-        test: /\.html$/,
-        loader: "raw-loader"
       }
     ]
     }

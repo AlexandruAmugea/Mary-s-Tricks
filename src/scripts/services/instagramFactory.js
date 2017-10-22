@@ -1,5 +1,5 @@
 instagramService.$inject = ['$http', 'instagramSearchDataService'];
-export default function instagramService($http, instagramSearchDataService) {
+function instagramService($http, instagramSearchDataService) {
 
     var instagramFactory = {};
 
@@ -70,3 +70,5 @@ export default function instagramService($http, instagramSearchDataService) {
 
     return instagramFactory;
 };
+
+export default instagramService;

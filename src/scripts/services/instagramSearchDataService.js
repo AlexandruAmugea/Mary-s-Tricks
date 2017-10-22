@@ -1,4 +1,4 @@
-export default function instagramSearchDataService() {
+function instagramSearchDataService() {
     this.getApiBaseUrl = function (_params) {
         return "https://api.instagram.com/v1/";
     };
@@ -65,3 +65,5 @@ export default function instagramSearchDataService() {
         return instagramSearchData;
     };
 };
+
+export default instagramSearchDataService;

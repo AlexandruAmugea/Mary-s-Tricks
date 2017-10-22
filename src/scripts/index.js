@@ -11,9 +11,9 @@ import angular from 'angular';
 import angularroute from 'angular-route';
 import instagramSearchDataService from './services/instagramSearchDataService';
 import instagramService from './services/instagramFactory';
-import sliderInstaFeed from './directives/sliderInstaFeed';
 import mainCtrl from './controllers/mainCtrl';
 import galleryCtrl from './controllers/galleryCtrl';
+import sliderInstaFeed from './directives/sliderInstaFeed';
 
 // Define the templates 
 var homeView = require('raw-loader!./views/home.html');
@@ -27,10 +27,13 @@ var app = angular.module('MaryTricks', [
 
 app.service('instagramSearchDataService', instagramSearchDataService);
 app.factory('instagramService', instagramService);
+
 app.controller('MainCtrl', mainCtrl);
 app.controller('galleryCtrl', galleryCtrl);
 app.directive('sliderInstaFeed', sliderInstaFeed);
-app.config(function($routeProvider) {
+
+config.$inject = ['$routeProvider'];
+function config($routeProvider) {
   $routeProvider
   .when("/", {
       template : homeView
@@ -41,5 +44,7 @@ app.config(function($routeProvider) {
   .when("/portfolio", {
       template : portfolioView
   });
-});
+}
+
+app.config(config);
 
