@@ -1,0 +1,18 @@
+.img-gallery-thumbnail,
+.img-gallery-preview {
+    width: 100%;
+    height: auto;
+}
+
+.img-gallery-thumbnail {
+    margin-bottom: 30px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.preview-wrapper {
+    max-height: 555px;
+    overflow: hidden;
+}

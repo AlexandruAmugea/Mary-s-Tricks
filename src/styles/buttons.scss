@@ -14,3 +14,59 @@
     }
     margin-top: 50px;
 }
+
+.btn-gallery {
+    border: none;
+    color: $black;
+    background: transparent;
+    transition: .25s all ease;
+    font-size: 26px;
+    border-radius: 0px;
+    padding: 0px;
+    font-family: $Apercum;
+    position: relative;
+    border: 2px solid transparent;
+    width: 100px;
+    text-align: left;
+
+    &.prev:before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 2px;
+        left: 3px;
+        top: 19px;
+        background: $black;
+        transition: .25s all ease;
+    }
+
+    &.next:before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 2px;
+        right: 3px;
+        top: 19px;
+        background: $black;
+        transition: .25s all ease;
+    }
+
+    &.next {
+        text-align: right;
+    }
+
+    &:hover:before {
+        width: 30px;
+        transition: .25s all ease;
+    }
+
+    &.disabled {
+        color: #ccc;
+        display: none;
+    }
+
+    &.disabled:hover {
+        cursor: not-allowed;
+    }
+}
+

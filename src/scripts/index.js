@@ -9,10 +9,11 @@ import 'babel-polyfill';
 import '../styles/index.scss';
 import angular from 'angular';
 import angularroute from 'angular-route';
-import mainCtrl from './controllers/mainCtrl';
 import instagramSearchDataService from './services/instagramSearchDataService';
 import instagramService from './services/instagramFactory';
 import sliderInstaFeed from './directives/sliderInstaFeed';
+import mainCtrl from './controllers/mainCtrl';
+import galleryCtrl from './controllers/galleryCtrl';
 
 // Define the templates 
 var homeView = require('raw-loader!./views/home.html');
@@ -27,6 +28,7 @@ var app = angular.module('MaryTricks', [
 app.service('instagramSearchDataService', instagramSearchDataService);
 app.factory('instagramService', instagramService);
 app.controller('MainCtrl', mainCtrl);
+app.controller('galleryCtrl', galleryCtrl);
 app.directive('sliderInstaFeed', sliderInstaFeed);
 app.config(function($routeProvider) {
   $routeProvider

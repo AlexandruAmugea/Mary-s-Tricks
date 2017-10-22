@@ -230,3 +230,50 @@ hr {
     border: none;
     border-bottom: 1px solid $black;
 }
+
+body.contact {
+    background: url('~/images/contact-bg.jpg') no-repeat left top;
+    background-size: 100%;
+}
+
+.contact h2 {
+    font-size: 50px;
+    font-family: $Miller-Display;
+    margin-bottom: 30px;
+}
+
+.contact p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: $Miller-Display;
+}
+
+.contact #instagram {
+    margin-bottom: 0;
+}
+
+.contact #footer {
+    margin-top: 0;
+}
+
+.contact h4 {
+    font-family: $ApercumMedium;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.contact ul.contact-list {
+    padding: 0;
+}
+
+.contact ul.contact-list li {
+    float: left;
+    list-style: none;
+    padding-left: 15px;
+    font-size: 14px;
+    font-family: $ApercumMedium;
+}
+
+.contact ul.contact-list li:first-child {
+    padding: 0;
+}
