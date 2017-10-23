@@ -37,7 +37,7 @@ function mainCtrl($scope) {
         e.preventDefault();
         document.getElementsByClassName('desktop-nav')[0].classList.remove('active');
         document.getElementById('background-wrapper').classList.remove('opened');
-      }
+      };
 
     });
 }
