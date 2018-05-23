@@ -13,7 +13,9 @@ import instagramSearchDataService from './services/instagramSearchDataService';
 import instagramService from './services/instagramFactory';
 import mainCtrl from './controllers/mainCtrl';
 import galleryCtrl from './controllers/galleryCtrl';
+import homeCtrl from './controllers/homeController';
 import sliderInstaFeed from './directives/sliderInstaFeed';
+import galleryFiltersService from './services/galleryFilters';
 
 // Define the templates 
 var homeView = require('raw-loader!./views/home.html');
@@ -26,10 +28,12 @@ var app = angular.module('MaryTricks', [
 ]);
 
 app.service('instagramSearchDataService', instagramSearchDataService);
+app.service('galleryFiltersService', galleryFiltersService);
 app.factory('instagramService', instagramService);
 
 app.controller('MainCtrl', mainCtrl);
 app.controller('galleryCtrl', galleryCtrl);
+app.controller('homeCtrl', homeCtrl);
 app.directive('sliderInstaFeed', sliderInstaFeed);
 
 config.$inject = ['$routeProvider'];

@@ -1,5 +1,5 @@
-mainCtrl.$inject = ['$scope'];
-function mainCtrl($scope) {
+mainCtrl.$inject = ['$scope', 'galleryFiltersService'];
+function mainCtrl($scope, galleryFiltersService) {
   $scope.$on('$routeChangeStart', function(next, current) { 
       var path = current.$$route.originalPath;
       if(path === '/contact') {

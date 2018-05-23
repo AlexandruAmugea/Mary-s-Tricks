@@ -1,3 +1,4 @@
+<div ng-controller="homeCtrl">
 <section>
         <div class="container">
           <div class="row">
@@ -82,7 +83,7 @@
                     </div>
                     <div class="col-xs-12 col-sm-7 col-md-7">
                       <ul class="hp-list">
-                        <a href="#/portfolio">
+                        <a ng-click="goToGallery('brows')">
                           <li>Nude makeup</li>
                         </a>
                         <a href="#/portfolio">
@@ -129,7 +130,7 @@
                       </div>
                       <div class="col-xs-12 col-sm-7 col-md-7">
                         <ul class="hp-list">
-                          <a href="#/portfolio">
+                          <a href="#/portfolio" ng-click="goToGallery('brows')">
                             <li>Lashes extension ‘1 by 1’</li>
                           </a>
                           <a href="#/portfolio">
@@ -171,3 +172,4 @@
           </div>
         </div>
       </section>
+    </div>

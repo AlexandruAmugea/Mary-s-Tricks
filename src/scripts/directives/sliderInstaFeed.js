@@ -11,12 +11,6 @@ function directiveFunction (instagramService, $scope) {
         _data.data.data.forEach(function(elem){
             $scope.picturesArray.push(elem);
         });
-        _data.data.data.forEach(function(elem){
-            $scope.picturesArray.push(elem);
-        });
-        _data.data.data.forEach(function(elem){
-            $scope.picturesArray.push(elem);
-        });
         $scope.pictures = $scope.picturesArray.slice(0,8);
     });
 };
