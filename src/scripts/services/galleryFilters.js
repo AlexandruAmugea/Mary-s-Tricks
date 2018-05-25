@@ -16,6 +16,10 @@ function galleryFiltersService() {
         return filters;
     };
 
+    galleryFilters.reset = function(){
+        sessionStorage.removeItem(galleryFilter);
+    };
+
     return galleryFilters;
 };
 

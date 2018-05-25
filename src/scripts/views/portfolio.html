@@ -1,5 +1,11 @@
 <div class="container" ng-controller="galleryCtrl">
     <div class="row">
+        <div class="col-xs-12">
+            <a ng-click="getAll()">Show all pictures</a>
+        </div>
+    </div>
+    <br>
+    <div class="row">
         <div class="col-xs-12 text-center loader-image" ng-show="options.loading">
             <img src="images/logo.png" class="logo" alt="">
         </div>
@@ -7,14 +13,25 @@
             <div class="preview-wrapper">
                 <img ng-src="{{selectedImage.images.standard_resolution.url}}" class="img-gallery-preview" />
             </div>
+        </div> 
+        <div class="col-xs-12 col-sm-6" ng-show="!options.loading">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6" ng-repeat="pic in picturesUpFirst track by $index">
+                    <img ng-src="{{pic.images.standard_resolution.url}}" class="img-gallery-thumbnail" ng-click="changePreview(pic)"/>
+                </div>
+            </div>
         </div>
-        <div class="col-xs-12 col-sm-3" ng-repeat="pic in picturesUp track by $index">
-            <img ng-src="{{pic.images.low_resolution.url}}" class="img-gallery-thumbnail" ng-click="changePreview(pic)"/>
-        </div>
+        <div class="col-xs-12 col-sm-6" ng-show="!options.loading">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6" ng-repeat="pic in picturesUpSecond track by $index">
+                    <img ng-src="{{pic.images.standard_resolution.url}}" class="img-gallery-thumbnail" ng-click="changePreview(pic)"/>
+                </div>
+            </div>
+            </div>
     </div>
     <div class="row" ng-show="!options.loading">
         <div class="col-xs-12 col-sm-3" ng-repeat="pic in picturesDown track by $index">
-            <img ng-src="{{pic.images.low_resolution.url}}" class="img-gallery-thumbnail" ng-click="changePreview(pic)"/>
+            <img ng-src="{{pic.images.standard_resolution.url}}" class="img-gallery-thumbnail" ng-click="changePreview(pic)"/>
         </div>
     </div>
     <div class="row" ng-show="!options.loading">

@@ -13,9 +13,15 @@ function galleryCtrl(instagramService, $scope, galleryFiltersService) {
     $scope.pictures         = [];
     $scope.allPictures      = [];
     $scope.selectedImage    = [];
-    $scope.filters          = galleryFiltersService.getFilter();
+
+    $scope.getAll           = ()=>{
+        galleryFiltersService.reset();
+        $scope.init();
+    };
 
     $scope.init = ()=>{
+        $scope.filters          = galleryFiltersService.getFilter();
+        $scope.options.loading  = true;
         instagramService.getMediaFromUserById({
             userId: KEYS.instagramUser,
             access_token: KEYS.instagramToken,
@@ -31,7 +37,6 @@ function galleryCtrl(instagramService, $scope, galleryFiltersService) {
                 });
                 createDataForPages($scope.picturesArray);
                 $scope.options.loading = false;
-                console.log($scope.picturesArray);
             } else {
                 _data.data.data.forEach(function(elem){
                     $scope.picturesArray.push(elem);
@@ -45,14 +50,16 @@ function galleryCtrl(instagramService, $scope, galleryFiltersService) {
     $scope.nextPage = function(){
         $scope.options.activePage += 1;
         $scope.pictures = $scope.allPictures[$scope.options.activePage -1];
-        $scope.picturesUp = $scope.pictures.slice(0,4);
+        $scope.picturesUpFirst = $scope.pictures.slice(0,2);
+        $scope.picturesUpSecond = $scope.pictures.slice(2,4);
         $scope.picturesDown  = $scope.pictures.slice(4,8);
     };
 
     $scope.prevPage = function(){
         $scope.options.activePage -= 1;
         $scope.pictures = $scope.allPictures[$scope.options.activePage - 1];
-        $scope.picturesUp = $scope.pictures.slice(0,4);
+        $scope.picturesUpFirst = $scope.pictures.slice(0,2);
+        $scope.picturesUpSecond = $scope.pictures.slice(2,4);
         $scope.picturesDown  = $scope.pictures.slice(4,8);
     };
     
@@ -64,7 +71,8 @@ function galleryCtrl(instagramService, $scope, galleryFiltersService) {
             data.splice(0,8);
         };
         $scope.pictures = $scope.allPictures[$scope.options.activePage - 1];
-        $scope.picturesUp = $scope.pictures.slice(0,4);
+        $scope.picturesUpFirst = $scope.pictures.slice(0,2);
+        $scope.picturesUpSecond = $scope.pictures.slice(2,4);
         $scope.picturesDown  = $scope.pictures.slice(4,8);
         $scope.selectedImage = $scope.pictures[0];
     };
